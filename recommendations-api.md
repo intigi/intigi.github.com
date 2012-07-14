@@ -12,9 +12,20 @@ Returns the top matching results for one of your `Interests` in JSON format.
 
 ## Parameters
 
-| interest_id | The id of the `Interest` you want recommendations for. Please see [How to set up Interests](/) for details. |
-| format | One of `json` or `xml` |
-| count | The maximum number of recommendations to return |
+<table>
+  <tr>
+    <th>Param name</th><th>Description</th>
+  </tr>
+  <tr>
+    <td>interest_id</td><td>The id of the `Interest` you want recommendations for. Please see [How to set up Interests](/) for details.</td>
+  </tr>
+  <tr>
+    <td>format</td><td>One of `json` or `xml`.</td>
+  </tr>
+  <tr>
+    <td>max_items</td><td>The maximum number of recommendations to return.</td>
+  </tr>
+</table>
 
 ## Example
 

@@ -4,34 +4,33 @@ layout: default
 
 # Recommendations API
 
-Returns the top matching results for one of your `Interests` in JSON format.
+Returns the top Recommendations for one of your Interests or Interest Folders in JSON format.
 
-## Resource URL
+## Recommendations for Interests
 
-`GET https://intigi.com/api/recommendations/v1/buckets/<interest_id>.<format>`
+### Resource URL
 
-## Parameters
+`GET https://intigi.com/api/recommendations/v1/interests/<interest_id>.json`
+
+### Parameters
 
 <table>
   <tr>
     <th>Name</th><th>Description</th>
   </tr>
   <tr>
-    <td>interest_id</td><td>The id of the `Interest` you want recommendations for. Please see <a href="/">How to set up Interests</a> for details.</td>
+    <td>interest_id</td><td>The id of the Interest you want Recommendations for.</td>
   </tr>
   <tr>
-    <td>format</td><td>One of <code>json</code> or <code>xml</code>.</td>
-  </tr>
-  <tr>
-    <td>max_items</td><td>The maximum number of recommendations to return.</td>
+    <td>max_items</td><td>Optional. The maximum number of recommendations to return. Default: 5.</td>
   </tr>
 </table>
 
-## Example
+### Example
 
 Request:
 
-`GET https://intigi.com/api/recommendations/v1/buckets/2.json`
+`GET https://intigi.com/api/recommendations/v1/interests/2.json`
 
 Response:
 
@@ -55,3 +54,53 @@ Response:
   },
 ]
 {% endhighlight %}
+
+## Recommendations for Interest Folders
+
+### Resource URL
+
+`GET https://intigi.com/api/recommendations/v1/folder/<folder_id>.json`
+
+### Parameters
+
+<table>
+  <tr>
+    <th>Name</th><th>Description</th>
+  </tr>
+  <tr>
+    <td>folder_id</td><td>The id of the Interest Folder you want Recommendations for.</td>
+  </tr>
+  <tr>
+    <td>max_items</td><td>Optional. The maximum number of recommendations to return. Default: 5.</td>
+  </tr>
+</table>
+
+### Example
+
+Request:
+
+`GET https://intigi.com/api/recommendations/v1/folders/2.json`
+
+Response:
+
+{% highlight javascript %}
+[
+  {
+    "url": "https://intigi.com",
+    "found_at": "Fri Jul 16 16:58:46 +0000 2010",
+    "title": "Accelerate your content marketing",
+    "excerpt": "Lorem ipsum ...",
+    "host_name": "intigi.com",
+    "popularity": 70
+  },
+  {
+    "url": "https://intigi.com",
+    "found_at": "Fri Jul 16 16:58:46 +0000 2010",
+    "title": "Accelerate your content marketing",
+    "excerpt": "Lorem ipsum ...",
+    "host_name": "intigi.com",
+    "popularity": 70
+  },
+]
+{% endhighlight %}
+

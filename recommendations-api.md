@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Intigi Recommendations API
+# Recommendations API
 
 Returns the top matching results for one of your `Interests` in JSON format.
 

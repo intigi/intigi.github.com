@@ -50,9 +50,6 @@ The response is an array of *Interest Folder* objects with the following attribu
   <tr>
     <td>query</td><td>The Interest's query.</td>
   </tr>
-  <tr>
-    <td>sources</td><td>The Interest's sources.</td>
-  </tr>
 </table>
 
 
@@ -72,8 +69,8 @@ Response:
     "interests": [
       {
         "id": 1433,
-        "name": "...",
-        "query": "..."
+        "name": "Curation",
+        "query": "curation \"content curation\" curate"
       },
       ... (more interests)
     ]

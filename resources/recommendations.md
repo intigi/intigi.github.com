@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Resource: Recommendations
+# Recommendations
 
 Returns the top *Recommendations* for one of your *Interests* or *Interest Folders*.
 
@@ -19,10 +19,10 @@ Returns the top *Recommendations* for one of your *Interests* or *Interest Folde
     <th>Name</th><th>Description</th>
   </tr>
   <tr>
-    <td>interest_id</td><td>The id of the *Interest* you want *Recommendations* for.</td>
+    <td>interest_id</td><td>The id of the Interest.</td>
   </tr>
   <tr>
-    <td>max_items</td><td>Optional. The maximum number of *Recommendations* to return. Default: 5.</td>
+    <td>max_items</td><td>Optional. The maximum number of Recommendations to return. Default: 5.</td>
   </tr>
 </table>
 
@@ -89,10 +89,10 @@ Response:
     <th>Name</th><th>Description</th>
   </tr>
   <tr>
-    <td>interest_folder_id</td><td>The id of the *Interest Folder* you want *Recommendations* for.</td>
+    <td>interest_folder_id</td><td>The id of the Interest Folder.</td>
   </tr>
   <tr>
-    <td>max_items</td><td>Optional. The maximum number of *Recommendations* to return. Default: 5.</td>
+    <td>max_items</td><td>Optional. The maximum number of Recommendations to return. Default: 5.</td>
   </tr>
 </table>
 
@@ -108,17 +108,4 @@ Request:
 
 Response:
 
-{% highlight javascript %}
-[
-  {
-    "url": "https://intigi.com",
-    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
-    "title": "Accelerate your content marketing",
-    "excerpt": "Lorem ipsum ...",
-    "host_name": "intigi.com",
-    "popularity": 70
-  },
-  ...
-]
-{% endhighlight %}
-
+Same as response data for *Interests*. Please see above for details.

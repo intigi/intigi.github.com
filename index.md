@@ -21,6 +21,6 @@ Follow these steps to get started with the Intigi API:
 
 ### API Documentation
 
-* [Interest Folders and Interests](/resources/interest_folders.html)
+* [Interest Folders and Interests](/resources/interest_folders_and_interests.html)
 * [Recommendations](/resources/recommendations.html) for an *Interest Folder* or an *Interest*.
 * [Authentication](/api-authentication.html)

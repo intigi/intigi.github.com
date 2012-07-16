@@ -19,8 +19,8 @@ Follow these steps to get started with the Intigi API:
 * Security: All requests are performed via SSL. We properly encrypt all credentials. We filter passwords so they never get stored in our server logs. Our firewalls are locked down tightly.
 * Rate limits: This is up to you since we charge for every request. We consider 1-50 requests per day and Interest reasonable.
 
-### API Documentation
+### API Concepts
 
 * [Interest Folders and Interests](/resources/interest_folders_and_interests.html)
-* [Recommendations](/resources/recommendations.html) for an *Interest Folder* or an *Interest*.
+* [Recommendations](/resources/recommendations.html)
 * [Authentication](/api-authentication.html)

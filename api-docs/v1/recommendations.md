@@ -38,19 +38,19 @@ The response is an array of *Recommendation* objects. Each *Recommendation* has 
     <td>url</td><td>The URL of the recommended article.</td>
   </tr>
   <tr>
-    <td>found_at</td><td>The date and time in UTC when Intigi found the article.</td>
-  </tr>
-  <tr>
-    <td>title</td><td>The HTML document title of the recommended article, or the URL if no title is present.</td>
-  </tr>
-  <tr>
     <td>excerpt</td><td>The first 300 characters of the recommended article.</td>
+  </tr>
+  <tr>
+    <td>found_at</td><td>The date and time in UTC when Intigi found the article.</td>
   </tr>
   <tr>
     <td>host_name</td><td>The host name of the URL.</td>
   </tr>
   <tr>
     <td>popularity</td><td>A measure of the recommended article's popularity on a scale of 0 to 100. 0 means not popular, 100 means extremely popular.</td>
+  </tr>
+  <tr>
+    <td>title</td><td>The HTML document title of the recommended article, or the URL if no title is present.</td>
   </tr>
 </table>
 
@@ -66,11 +66,11 @@ Response:
 [
   {
     "url": "https://intigi.com",
-    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
-    "title": "Accelerate your content marketing",
     "excerpt": "Lorem ipsum ...",
+    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
     "host_name": "intigi.com",
-    "popularity": 70
+    "popularity": 70,
+    "title": "Accelerate your content marketing"
   },
   ...
 ]

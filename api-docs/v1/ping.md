@@ -10,10 +10,6 @@ Allows you to test if the API is operational at all.
 
 This is the simplest test possible to run against the Intigi API. It doesn't require authentication or special formats.
 
-### Resource URL
-
-`GET https://intigi.com/api/v1/ping`
-
 ### Example
 
 Request:

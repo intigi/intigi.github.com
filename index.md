@@ -11,7 +11,7 @@ Follow these steps to get started with the Intigi API:
 3. Use the Intigi API to get a list of your [Interest Folders and Interests](/v1/interest-folders-and-interests.html) in JSON format.
 4. Use the Intigi API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.
 
-### API highlights
+### API Highlights
 
 * API type: REST (JSON via HTTPS).
 * Authentication: Via HTTP Basic Authentication.

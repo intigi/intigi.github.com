@@ -56,7 +56,10 @@ The response is an array of *Recommendation* objects. Each *Recommendation* has 
     <td>host_name</td><td>The host name of the URL.</td>
   </tr>
   <tr>
-    <td>popularity</td><td>A measure of the recommended article's popularity on a scale of 0 to 100. 0 means not popular, 100 means extremely popular.</td>
+    <td>popularity</td><td>
+      A measure of the recommended article's popularity on a scale of 0 to 100.<br/>
+      0 means not popular, 100 means extremely popular.
+    </td>
   </tr>
   <tr>
     <td>title</td><td>The HTML document title of the recommended article, or the URL if no title is present.</td>
@@ -81,7 +84,7 @@ Response:
     "excerpt": "Lorem ipsum ...",
     "found_at": "Fri Jul 21 13:58:46 +0000 2012",
     "host_name": "intigi.com",
-    "popularity": 70,
+    "popularity": 42,
     "title": "Accelerate your content marketing",
     "word_count": 256
   },

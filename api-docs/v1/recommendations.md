@@ -24,6 +24,15 @@ Returns the top *Recommendations* for one of your *Interests* or *Interest Folde
   <tr>
     <td>max_items</td><td>Optional. The maximum number of Recommendations to return. Default: 5.</td>
   </tr>
+  <tr>
+    <td>query_refinement</td><td>
+      Optional. A string to be appended to the query defined on the interest to further refine the results.
+      Example: On a "Restaurants" base query, you might want to add +"San Francisco" as a refinement.
+      Please see the <a href="https://intigi.com/help/query_format">query documentation</a> for syntax and operators.
+      Also make sure to URL encode any special characters. The earlier example would look like this:
+      <code>GET https://intigi.com/api/v1/interests/123/recommendations.json?query_refinement=%2B%22San%20Francisco%22</code>
+    </td>
+  </tr>
 </table>
 
 ### Response Attributes

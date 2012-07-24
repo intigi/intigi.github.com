@@ -61,6 +61,9 @@ The response is an array of *Recommendation* objects. Each *Recommendation* has 
   <tr>
     <td>title</td><td>The HTML document title of the recommended article, or the URL if no title is present.</td>
   </tr>
+  <tr>
+    <td>word_count</td><td>The number of words in the recommended article.</td>
+  </tr>
 </table>
 
 ### Example
@@ -79,7 +82,8 @@ Response:
     "found_at": "Fri Jul 21 13:58:46 +0000 2012",
     "host_name": "intigi.com",
     "popularity": 70,
-    "title": "Accelerate your content marketing"
+    "title": "Accelerate your content marketing",
+    "word_count": 256
   },
   ...
 ]

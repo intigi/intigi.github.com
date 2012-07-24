@@ -100,9 +100,6 @@ Response:
   <tr>
     <td>interest_folder_id</td><td>The id of the Interest Folder.</td>
   </tr>
-  <tr>
-    <td>max_items</td><td>Optional. The maximum number of Recommendations to return. Default: 5.</td>
-  </tr>
 </table>
 
 ### Response Data

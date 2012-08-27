@@ -80,13 +80,21 @@ Response:
 {% highlight javascript %}
 [
   {
-    "url": "https://intigi.com",
-    "excerpt": "Lorem ipsum ...",
-    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
-    "host_name": "intigi.com",
-    "popularity": 42,
     "title": "Accelerate your content marketing",
-    "word_count": 256
+    "host_name": "intigi.com",
+    "url": "https://intigi.com",
+    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
+    "excerpt": "Lorem ipsum ...",
+    "popularity": 42,
+    "word_count": 256,
+    "images": [
+      { "url": "http://static.intigi.com/image1.jpg" },
+      { "url": "http://static.intigi.com/image2.jpg" }
+    ],
+    "videos": [
+      { "url": "http://static.intigi.com/video1.mp4" },
+      { "url": "http://static.intigi.com/video2.mp4" }
+    ],
   },
   ...
 ]

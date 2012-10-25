@@ -12,6 +12,10 @@ This endpoint returns the top *Recommendations* for:
 
 ## Recommendations for Interests<a name="interests">&nbsp;</a>
 
+
+
+
+
 ### Resource URL
 
 `GET https://intigi.com/api/v1/interests/<interest_id>/recommendations.json`
@@ -91,25 +95,29 @@ Response:
 {% highlight javascript %}
 [
   {
-    "title": "Accelerate your content marketing",
-    "host_name": "intigi.com",
-    "url": "https://intigi.com",
-    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
     "excerpt": "Lorem ipsum ...",
-    "popularity": 42,
-    "word_count": 256,
+    "found_at": "Fri Jul 21 13:58:46 +0000 2012",
+    "host_name": "intigi.com",
     "images": [
       { "url": "http://static.intigi.com/image1.jpg" },
       { "url": "http://static.intigi.com/image2.jpg" }
     ],
+    "popularity": 42,
+    "title": "Accelerate your content marketing",
+    "url": "https://intigi.com",
     "videos": [
       { "url": "http://static.intigi.com/video1.mp4" },
       { "url": "http://static.intigi.com/video2.mp4" }
     ],
+    "word_count": 256
   },
   ...
 ]
 {% endhighlight %}
+
+
+
+
 
 ## Recommendations for Interest Folders<a name="interest_folders">&nbsp;</a>
 
@@ -143,60 +151,79 @@ Response:
 Same as example response for [*Interests*](#interests).
 
 
-## Ad-hoc query<a name="query">&nbsp;</a>
+
+
+
+## Recommendations for ad-hoc queries<a name="query">&nbsp;</a>
 
 ### Resource URL
 
 `GET https://intigi.com/api/v1/query/recommendations.json`
 
 If you have a lot of query params, then you can also use a POST request and submit
-the params in the request body to avoid length restrictions on GET requests.
+the params in the request body to avoid length restrictions on URLs for GET requests.
 
 ### Request Parameters
 
 <table>
   <tr>
-    <th>Name</th><th>Description</th><th>Optional, required, defaults</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Optional, required, defaults</th>
   </tr>
   <tr>
-    <td>query</td><td>The search query. Please see <a href="https://intigi.com/help/query_format">query documentation</a> for details.</td><td>Required</td>
+    <td>query</td>
+    <td>
+      The search query as string. Please see
+      <a href="https://intigi.com/help/query_format">query documentation</a>
+      for details.
+    </td>
+    <td>Required</td>
   </tr>
   <tr>
-    <td>max_items</td><td>The maximum number of Recommendations to return.</td><td>Optional, default: 5</td>
+    <td>max_items</td>
+    <td>The maximum number of Recommendations to return. Integer between 1 and 50.</td>
+    <td>Optional, default: 5</td>
   </tr>
   <tr>
     <td>minimum_score</td>
     <td>
       Results must have a score higher than this. Scores are
-      computed by the indexed search engine and typically range from 0 to 10.</td><td>Optional, default: 0
-    </td>
+      computed by the indexed search engine and typically range from 0.01 to 15.</td>
+    <td>Optional, default: 0</td>
   </tr>
   <tr>
     <td>found_within</td>
     <td>
       Results must have been found within the given time period. One of
-      'last_24_hours' or 'last_7_days'.</td><td>Optional, default: 'last_24_hours'
+      'last_24_hours' or 'last_7_days'.
     </td>
+    <td>Optional, default: 'last_24_hours'</td>
   </tr>
   <tr>
-    <td>must_have_image</td><td>Results must have images.</td><td>Optional, default: false</td>
+    <td>must_have_image</td>
+    <td>Results must have images. Boolean true or false.</td>
+    <td>Optional, default: false</td>
   </tr>
   <tr>
-    <td>must_have_video</td><td>Results must have videos.</td><td>Optional, default: false</td>
+    <td>must_have_video</td>
+    <td>Results must have videos. Boolean true or false.</td>
+    <td>Optional, default: false</td>
   </tr>
   <tr>
-    <td>min_word_count</td><td>Results must have at least this many words.</td><td>Optional, default: No value</td>
+    <td>min_word_count</td>
+    <td>Results must have at least this many words. Integer between 1 and 10,000.</td>
+    <td>Optional, default: No value</td>
   </tr>
   <tr>
     <td>max_word_count</td>
-    <td>
-      Results muast have at most this many words. Maximum value is 10,000.</td><td>Optional, default: No value
-    </td>
+    <td>Results muast have at most this many words. Integer between 1 and 10,000.</td>
+    <td>Optional, default: No value</td>
   </tr>
   <tr>
     <td>response_fields</td>
     <td>
-      List of response fields to return. One of:
+      List of response fields to return. Array containing any of the following strings:
       <ul>
         <li>excerpt*</li>
         <li>found_at*</li>
@@ -209,25 +236,34 @@ the params in the request body to avoid length restrictions on GET requests.
         <li>videos*</li>
         <li>word_count*</li>
         <li>highlights</li>
-      </ul></td><td>Optional, default: all items marked with *</td>
+      </ul>
+    </td>
+    <td>Optional, default: all items marked with *</td>
   </tr>
 </table>
 
-other possible request params: source_ids_to_use, source_ids_to_exclude, minimum_should_match, block_repeat_results
-
 ### Response Data
 
-Contains all the fields for [*Interests*](#interests), with the addition of the following:
+Contains all the fields documented under [*Interests*](#interests), with the addition of the following:
 
 <table>
   <tr>
     <th>Name</th><th>Description</th>
   </tr>
   <tr>
-    <td>score</td><td>The score computed by the indexed search engine.</td>
+    <td>score</td>
+    <td>
+      The score computed by the indexed search engine. It typically ranges from
+      0.01 to 15.
+    </td>
   </tr>
   <tr>
-    <td>highlights</td><td>Document fragments that match the query, with matching terms highlighted. This is useful for debugging queries, as well as providing summarized context to readers.</td>
+    <td>highlights</td>
+    <td>
+      Up to 3 document fragments that match the query, with matching terms highlighted.
+      This is useful for debugging queries, as well as providing summarized
+      context to readers.
+    </td>
   </tr>
 </table>
 
@@ -235,7 +271,7 @@ Contains all the fields for [*Interests*](#interests), with the addition of the 
 
 Request:
 
-`GET https://intigi.com/api/v1/query/recommendations.json?query=test%20query`
+`GET https://intigi.com/api/v1/query/recommendations.json?query=test%20query&response_fields[]=title&response_fields[]=url`
 
 Response:
 

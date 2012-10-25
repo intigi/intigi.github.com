@@ -282,7 +282,16 @@ Contains all the fields documented under [*Interests*](#interests), with the add
     <td>
       Up to 3 document fragments that match the query, with matching terms highlighted.
       This is useful for debugging queries, as well as providing summarized
-      context to readers.
+      context to readers.<br/>
+      Example for the query string 'test':
+      <code>
+        {
+          'highlights': [
+            "Subject: <em>test</em> In a recent post, they report the results",
+            "Rorschach <em>test</em> of U.S.-Turkish, with Ankara viewing them"
+          ]
+        }
+      </code>
     </td>
   </tr>
 </table>

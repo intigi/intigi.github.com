@@ -177,48 +177,60 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       The search query as string. Please see
       <a href="https://intigi.com/help/query_format">query documentation</a>
       for details.
+      Query string example for the required phrase +"San Francisco": `query=%2B%22San%20Francisco%22`.
     </td>
     <td>Required</td>
   </tr>
   <tr>
     <td>max_items</td>
-    <td>The maximum number of Recommendations to return. Integer between 1 and 50.</td>
+    <td>
+      The maximum number of Recommendations to return. Integer between 1 and 50.
+    </td>
     <td>Optional, default: 5</td>
   </tr>
   <tr>
     <td>minimum_score</td>
     <td>
       Results must have a score higher than this. Scores are
-      computed by the indexed search engine and typically range from 0.01 to 15.</td>
-    <td>Optional, default: 0</td>
+      computed by the indexed search engine and typically range from 0.01 to 15.
+      Query string example: `minimum_score=0.5`
+    </td>
+    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>found_within</td>
     <td>
       Results must have been found within the given time period. One of
       'last_24_hours' or 'last_7_days'.
+      Query string example: `found_within=last_24_hours`
     </td>
     <td>Optional, default: 'last_24_hours'</td>
   </tr>
   <tr>
     <td>must_have_image</td>
-    <td>Results must have images. Boolean true or false.</td>
+    <td>
+      Results must have images. Boolean true or false.
+      Query string example: `must_have_image=true`
+    </td>
     <td>Optional, default: false</td>
   </tr>
   <tr>
     <td>must_have_video</td>
-    <td>Results must have videos. Boolean true or false.</td>
+    <td>
+      Results must have videos. Boolean true or false.
+      Query string example: `must_have_video=true`
+    </td>
     <td>Optional, default: false</td>
   </tr>
   <tr>
     <td>min_word_count</td>
     <td>Results must have at least this many words. Integer between 1 and 10,000.</td>
-    <td>Optional, default: No value</td>
+    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>max_word_count</td>
     <td>Results muast have at most this many words. Integer between 1 and 10,000.</td>
-    <td>Optional, default: No value</td>
+    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>response_fields</td>
@@ -237,6 +249,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
         <li>word_count*</li>
         <li>highlights</li>
       </ul>
+      Query string example: `response_fields[]=title&response_fields[]=url`
     </td>
     <td>Optional, default: all items marked with *</td>
   </tr>

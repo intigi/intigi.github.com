@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/* @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700); */
 
 html {
   overflow-y: scroll;
@@ -6,7 +6,7 @@ html {
 
 body {
   padding:50px;
-  font:normal 62.5% "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   /* font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; */
   color:#555;
   /* font-weight:300; */

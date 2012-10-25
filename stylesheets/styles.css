@@ -6,9 +6,10 @@ html {
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:normal 62.5% "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  /* font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; */
   color:#555;
-  font-weight:300;
+  /* font-weight:300; */
 }
 
 h1, h2, h3, h4, h5, h6 {

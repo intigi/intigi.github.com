@@ -10,7 +10,7 @@ This endpoint returns the top *Recommendations* for:
 * one of your [*Interest Folders*](#interest_folders)
 * an ad-hoc [*Query*](#query)
 
-## <a id="interests"></a> Recommendations for Interests
+## Recommendations for Interests<a name="interests">&nbsp;</a>
 
 ### Resource URL
 
@@ -111,7 +111,7 @@ Response:
 ]
 {% endhighlight %}
 
-## <a id="interest_folders"></a> Recommendations for Interest Folders
+## Recommendations for Interest Folders<a name="interest_folders">&nbsp;</a>
 
 ### Resource URL
 
@@ -143,7 +143,7 @@ Response:
 Same as example response for [*Interests*](#interests).
 
 
-## <a id="query"></a> Ad-hoc query
+## Ad-hoc query<a name="query">&nbsp;</a>
 
 ### Resource URL
 

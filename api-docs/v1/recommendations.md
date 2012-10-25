@@ -177,7 +177,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       The search query as string. Please see
       <a href="https://intigi.com/help/query_format">query documentation</a>
       for details.
-      Query string example for the required phrase +"San Francisco": `query=%2B%22San%20Francisco%22`.
+      Query string example for the required phrase +"San Francisco": <code>query=%2B%22San%20Francisco%22</code>.
     </td>
     <td>Required</td>
   </tr>
@@ -193,7 +193,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>
       Results must have a score higher than this. Scores are
       computed by the indexed search engine and typically range from 0.01 to 15.
-      Query string example: `minimum_score=0.5`
+      Query string example: <code>minimum_score=0.5</code>
     </td>
     <td>Optional, default: Nil</td>
   </tr>
@@ -202,7 +202,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>
       Results must have been found within the given time period. One of
       'last_24_hours' or 'last_7_days'.
-      Query string example: `found_within=last_24_hours`
+      Query string example: <code>found_within=last_24_hours</code>
     </td>
     <td>Optional, default: 'last_24_hours'</td>
   </tr>
@@ -210,7 +210,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>must_have_image</td>
     <td>
       Results must have images. Boolean true or false.
-      Query string example: `must_have_image=true`
+      Query string example: <code>must_have_image=true</code>
     </td>
     <td>Optional, default: false</td>
   </tr>
@@ -218,7 +218,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>must_have_video</td>
     <td>
       Results must have videos. Boolean true or false.
-      Query string example: `must_have_video=true`
+      Query string example: <code>must_have_video=true</code>
     </td>
     <td>Optional, default: false</td>
   </tr>
@@ -249,7 +249,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
         <li>word_count*</li>
         <li>highlights</li>
       </ul>
-      Query string example: `response_fields[]=title&response_fields[]=url`
+      Query string example: <code>response_fields[]=title&response_fields[]=url</code>
     </td>
     <td>Optional, default: all items marked with *</td>
   </tr>

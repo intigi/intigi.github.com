@@ -283,11 +283,11 @@ Contains all the fields documented under [*Interests*](#interests), with the add
       Up to 3 document fragments that match the query, with matching terms highlighted.
       This is useful for debugging queries, as well as providing summarized
       context to readers.<br/>
-      Example for the query string 'test':
+      Example highlights for the query string 'test':
       <pre><code class="javascript">{
   'highlights': [
-    "Subject: <em>test</em> In a recent post, they report the results",
-    "Rorschach <em>test</em> of U.S.-Turkish, with Ankara viewing them"
+    "Subject: &lt;em&gt;test&lt;/em&gt; In a recent post, they report the results",
+    "Rorschach &lt;em&gt;test&lt;/em&gt; of U.S.-Turkish, with Ankara viewing them"
   ]
 }</code></pre>
     </td>

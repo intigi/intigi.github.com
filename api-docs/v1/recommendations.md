@@ -176,7 +176,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>
       The search query as string. Please see
       <a href="https://intigi.com/help/query_format">query documentation</a>
-      for details.
+      for details.<br/>
       Query string example for the required phrase +"San Francisco": <code>query=%2B%22San%20Francisco%22</code>.
     </td>
     <td>Required</td>
@@ -184,7 +184,8 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>max_items</td>
     <td>
-      The maximum number of Recommendations to return. Integer between 1 and 50.
+      The maximum number of Recommendations to return.<br/>
+      Integer between 1 and 50.
     </td>
     <td>Optional, default: 5</td>
   </tr>
@@ -192,7 +193,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>minimum_score</td>
     <td>
       Results must have a score higher than this. Scores are
-      computed by the indexed search engine and typically range from 0.01 to 15.
+      computed by the indexed search engine and typically range from 0.01 to 15.<br/>
       Query string example: <code>minimum_score=0.5</code>
     </td>
     <td>Optional, default: Nil</td>
@@ -201,7 +202,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>found_within</td>
     <td>
       Results must have been found within the given time period. One of
-      'last_24_hours' or 'last_7_days'.
+      'last_24_hours' or 'last_7_days'.<br/>
       Query string example: <code>found_within=last_24_hours</code>
     </td>
     <td>Optional, default: 'last_24_hours'</td>
@@ -209,7 +210,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>must_have_image</td>
     <td>
-      Results must have images. Boolean true or false.
+      Results must have images. Boolean true or false.<br/>
       Query string example: <code>must_have_image=true</code>
     </td>
     <td>Optional, default: false</td>
@@ -217,19 +218,25 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>must_have_video</td>
     <td>
-      Results must have videos. Boolean true or false.
+      Results must have videos. Boolean true or false.<br/>
       Query string example: <code>must_have_video=true</code>
     </td>
     <td>Optional, default: false</td>
   </tr>
   <tr>
     <td>min_word_count</td>
-    <td>Results must have at least this many words. Integer between 1 and 10,000.</td>
+    <td>
+      Results must have at least this many words.<br/>
+      Integer between 1 and 10,000.
+    </td>
     <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>max_word_count</td>
-    <td>Results muast have at most this many words. Integer between 1 and 10,000.</td>
+    <td>
+      Results must have at most this many words.<br/>
+      Integer between 1 and 10,000.
+    </td>
     <td>Optional, default: Nil</td>
   </tr>
   <tr>

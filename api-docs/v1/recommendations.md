@@ -284,14 +284,16 @@ Contains all the fields documented under [*Interests*](#interests), with the add
       This is useful for debugging queries, as well as providing summarized
       context to readers.<br/>
       Example for the query string 'test':
-      <code>
-        {
-          'highlights': [
-            "Subject: <em>test</em> In a recent post, they report the results",
-            "Rorschach <em>test</em> of U.S.-Turkish, with Ankara viewing them"
-          ]
-        }
-      </code>
+      <pre>
+        <code class="javascript">
+          {
+            'highlights': [
+              "Subject: <em>test</em> In a recent post, they report the results",
+              "Rorschach <em>test</em> of U.S.-Turkish, with Ankara viewing them"
+            ]
+          }
+        </code>
+      <pre>
     </td>
   </tr>
 </table>

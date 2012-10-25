@@ -293,7 +293,7 @@ Contains all the fields documented under [*Interests*](#interests), with the add
             ]
           }
         </code>
-      <pre>
+      </pre>
     </td>
   </tr>
 </table>

@@ -8,13 +8,13 @@ Allows you to test if the API is operational at all.
 
 ## Ping with text response
 
-This is the simplest test possible to run against the Intigi API. It doesn't require authentication or special formats.
+This is the simplest test possible to run against the ContentGems API. It doesn't require authentication or special formats.
 
 ### Example
 
 Request:
 
-`GET https://intigi.com/api/v1/ping`
+`GET https://contentgems.com/api/v1/ping`
 
 Response:
 
@@ -30,7 +30,7 @@ This test allows you to test the JSON response format.
 
 Request:
 
-`GET https://intigi.com/api/v1/ping.json`
+`GET https://contentgems.com/api/v1/ping.json`
 
 Response:
 

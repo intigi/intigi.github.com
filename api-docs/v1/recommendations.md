@@ -17,7 +17,7 @@ This endpoint returns the top *Recommendations* for:
 
 ### Resource URL
 
-`GET https://intigi.com/api/v1/interests/<interest_id>/recommendations.json`
+`GET https://contentgems.com/api/v1/interests/<interest_id>/recommendations.json`
 
 ### Request Parameters
 
@@ -35,9 +35,9 @@ This endpoint returns the top *Recommendations* for:
     <td>query_refinement</td><td>
       A string to be appended to the query defined on the interest to further refine the results.
       Example: On a "Restaurants" base query, you might want to add +"San Francisco" as a refinement.
-      Please see the <a href="https://intigi.com/help/query_format">query documentation</a> for syntax and operators.
+      Please see the <a href="http://support.intigi.com/forums/21352731-Interests">query documentation</a> for syntax and operators.
       Also make sure to URL encode any special characters. The earlier example would look like this:
-      <code>GET https://intigi.com/api/v1/interests/123/recommendations.json?query_refinement=%2B%22San%20Francisco%22</code>
+      <code>GET https://contentgems.com/api/v1/interests/123/recommendations.json?query_refinement=%2B%22San%20Francisco%22</code>
     </td>
     <td>Optional, default: nil</td>
   </tr>
@@ -55,7 +55,7 @@ The response is an array of *Recommendation* objects. Each *Recommendation* has 
     <td>excerpt</td><td>The first 300 characters of the recommended article.</td>
   </tr>
   <tr>
-    <td>found_at</td><td>The date and time in UTC when Intigi found the article.</td>
+    <td>found_at</td><td>The date and time in UTC when ContentGems found the article.</td>
   </tr>
   <tr>
     <td>host_name</td><td>The host name of the URL.</td>
@@ -87,7 +87,7 @@ The response is an array of *Recommendation* objects. Each *Recommendation* has 
 
 Request:
 
-`GET https://intigi.com/api/v1/interests/1433/recommendations.json`
+`GET https://contentgems.com/api/v1/interests/1433/recommendations.json`
 
 Response:
 
@@ -96,17 +96,17 @@ Response:
   {
     "excerpt": "Lorem ipsum ...",
     "found_at": "Fri Jul 21 13:58:46 +0000 2012",
-    "host_name": "intigi.com",
+    "host_name": "contentgems.com",
     "images": [
-      { "url": "http://static.intigi.com/image1.jpg" },
-      { "url": "http://static.intigi.com/image2.jpg" }
+      { "url": "http://static.contentgems.com/image1.jpg" },
+      { "url": "http://static.contentgems.com/image2.jpg" }
     ],
     "popularity": 42,
     "title": "Accelerate your content marketing",
-    "url": "https://intigi.com",
+    "url": "https://contentgems.com",
     "videos": [
-      { "url": "http://static.intigi.com/video1.mp4" },
-      { "url": "http://static.intigi.com/video2.mp4" }
+      { "url": "http://static.contentgems.com/video1.mp4" },
+      { "url": "http://static.contentgems.com/video2.mp4" }
     ],
     "word_count": 256
   },
@@ -122,7 +122,7 @@ Response:
 
 ### Resource URL
 
-`GET https://intigi.com/api/v1/query/recommendations.json`
+`GET https://contentgems.com/api/v1/query/recommendations.json`
 
 If you have a lot of query params, then you can also use a POST request and submit
 the params in the request body to avoid length restrictions on URLs for GET requests.
@@ -139,7 +139,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>query</td>
     <td>
       The search query as string. Please see
-      <a href="https://intigi.com/help/query_format">query documentation</a>
+      <a href="http://support.intigi.com/forums/21352731-Interests">query documentation</a>
       for details.<br/>
       Query string example for the required phrase +"Content Marketing":
       <code>query=%2B%22Content%20Marketing%22</code>.
@@ -263,7 +263,7 @@ Contains all the fields documented under [*Interests*](#interests), with the add
 
 Request:
 
-`GET https://intigi.com/api/v1/query/recommendations.json?query=test%20query&response_fields[]=title&response_fields[]=url`
+`GET https://contentgems.com/api/v1/query/recommendations.json?query=test%20query&response_fields[]=title&response_fields[]=url`
 
 Response:
 

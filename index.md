@@ -2,14 +2,14 @@
 layout: default
 ---
 
-## Welcome to the Intigi API documentation
+## Welcome to the ContentGems API documentation
 
-Follow these steps to get started with the Intigi API:
+Follow these steps to get started with the ContentGems API:
 
-1. [Sign up](https://intigi.com/start) for an Intigi account.
-2. Contact us to enable [API access](mailto:support@intigi.com).
-3. Set up your *Interests* and *Sources* in the Intigi web app.
-4. Use the Intigi API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.
+1. [Sign up](https://contentgems.com/start) for an ContentGems account.
+2. Contact us to enable [API access](mailto:support@contentgems.com).
+3. Set up your *Interests* and *Sources* in the ContentGems web app.
+4. Use the ContentGems API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.
 
 You can confirm that the API is operational by using the [Ping](/api-docs/v1/ping.html) endpoint.
 

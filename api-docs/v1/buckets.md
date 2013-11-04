@@ -8,7 +8,7 @@ Returns a list of all *Buckets* for the authenticated user.
 
 ### Resource URL
 
-`GET https://intigi.com/api/v1/buckets.json`
+`GET https://contentgems.com/api/v1/buckets.json`
 
 ### Request Parameters
 
@@ -37,7 +37,7 @@ The response is an array of *Bucket* objects with the following attributes:
 
 Request:
 
-`GET https://intigi.com/api/v1/buckets.json`
+`GET https://contentgems.com/api/v1/buckets.json`
 
 Response:
 
@@ -46,6 +46,6 @@ Response:
   {
     "id": 1789,
     "name": "Content Marketing Feed",
-    "atom_feed_url": "https://intigi.com/users/123/buckets/1789-content-marketing-feed.atom"
+    "atom_feed_url": "https://contentgems.com/users/123/buckets/1789-content-marketing-feed.atom"
 ]
 {% endhighlight %}

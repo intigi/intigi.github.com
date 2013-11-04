@@ -8,7 +8,7 @@ Returns a list of all *Interest Folders* and their included *Interests* for the 
 
 ### Resource URL
 
-`GET https://intigi.com/api/v1/interest_folders.json`
+`GET https://contentgems.com/api/v1/interest_folders.json`
 
 ### Request Parameters
 
@@ -57,7 +57,7 @@ The response is an array of *Interest Folder* objects with the following attribu
 
 Request:
 
-`GET https://intigi.com/api/v1/interest_folders.json`
+`GET https://contentgems.com/api/v1/interest_folders.json`
 
 Response:
 

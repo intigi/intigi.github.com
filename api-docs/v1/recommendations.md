@@ -221,7 +221,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
         <li>word_count</li>
         <li>highlights</li>
       </ul>
-      Query string example: <code>response_fields[]=title&response_fields[]=url</code>
+      Query string example: <code>response_fields[]=title&amp;response_fields[]=url</code>
     </td>
     <td>Optional, default: all fields</td>
   </tr>

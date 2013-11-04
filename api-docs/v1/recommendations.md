@@ -7,7 +7,6 @@ layout: default
 This endpoint returns the top *Recommendations* for:
 
 * one of your [*Interests*](#interests)
-* one of your [*Interest Folders*](#interest_folders)
 * an ad-hoc [*Query*](#query)
 
 ## Recommendations for Interests<a name="interests">&nbsp;</a>
@@ -119,41 +118,6 @@ Response:
 
 
 
-## Recommendations for Interest Folders<a name="interest_folders">&nbsp;</a>
-
-### Resource URL
-
-`GET https://intigi.com/api/v1/interest_folders/<interest_folder_id>/recommendations.json`
-
-### Request Parameters
-
-<table>
-  <tr>
-    <th>Name</th><th>Description</th><th>Optional, required, defaults</th>
-  </tr>
-  <tr>
-    <td>interest_folder_id</td><td>The id of the Interest Folder.</td><td>Required</td>
-  </tr>
-</table>
-
-### Response Data
-
-Same as response data for [*Interests*](#interests).
-
-### Example
-
-Request:
-
-`GET https://intigi.com/api/v1/interest_folders/1789/recommendations.json`
-
-Response:
-
-Same as example response for [*Interests*](#interests).
-
-
-
-
-
 ## Recommendations for ad-hoc queries<a name="query">&nbsp;</a>
 
 ### Resource URL
@@ -177,7 +141,8 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       The search query as string. Please see
       <a href="https://intigi.com/help/query_format">query documentation</a>
       for details.<br/>
-      Query string example for the required phrase +"San Francisco": <code>query=%2B%22San%20Francisco%22</code>.
+      Query string example for the required phrase +"Content Marketing":
+      <code>query=%2B%22Content%20Marketing%22</code>.
     </td>
     <td>Required</td>
   </tr>
@@ -244,21 +209,21 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>
       List of response fields to return. Array containing any of the following strings:
       <ul>
-        <li>excerpt*</li>
-        <li>found_at*</li>
-        <li>host_name*</li>
-        <li>images*</li>
-        <li>popularity*</li>
-        <li>score*</li>
-        <li>title*</li>
-        <li>url*</li>
-        <li>videos*</li>
-        <li>word_count*</li>
+        <li>excerpt</li>
+        <li>found_at</li>
+        <li>host_name</li>
+        <li>images</li>
+        <li>popularity</li>
+        <li>score</li>
+        <li>title</li>
+        <li>url</li>
+        <li>videos</li>
+        <li>word_count</li>
         <li>highlights</li>
       </ul>
       Query string example: <code>response_fields[]=title&response_fields[]=url</code>
     </td>
-    <td>Optional, default: all items marked with *</td>
+    <td>Optional, default: all fields</td>
   </tr>
 </table>
 

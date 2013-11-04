@@ -7,8 +7,8 @@ layout: default
 Follow these steps to get started with the Intigi API:
 
 1. [Sign up](https://intigi.com/start) for an Intigi account.
-2. Set up your *Interests* and *Sources* in the Intigi web app.
-3. Use the Intigi API to get a list of your [Interest Folders and Interests](/api-docs/v1/interest-folders-and-interests.html) in JSON format.
+2. Contact us to enable [API access](mailto:support@intigi.com).
+3. Set up your *Interests* and *Sources* in the Intigi web app.
 4. Use the Intigi API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.
 
 You can confirm that the API is operational by using the [Ping](/api-docs/v1/ping.html) endpoint.

@@ -205,6 +205,15 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>Optional, default: Nil</td>
   </tr>
   <tr>
+    <td>rank_by</td>
+    <td>
+      Results will be ranked by this attribute before the top items are selected. One of
+      'relevancy' or 'popularity'.<br/>
+      Query string example: <code>rank_by=popularity</code>
+    </td>
+    <td>Optional, default: 'popularity'</td>
+  </tr>
+  <tr>
     <td>response_fields</td>
     <td>
       List of response fields to return. Array containing any of the following strings:
@@ -224,6 +233,15 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       Query string example: <code>response_fields[]=title&amp;response_fields[]=url</code>
     </td>
     <td>Optional, default: all fields</td>
+  </tr>
+  <tr>
+    <td>sort_by</td>
+    <td>
+      Results will be sorted by this attribute after the top items are selected. One of
+      'date', 'relevancy' or 'popularity'.<br/>
+      Query string example: <code>sort_by=date</code>
+    </td>
+    <td>Optional, default: 'date'</td>
   </tr>
 </table>
 

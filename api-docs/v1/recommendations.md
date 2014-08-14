@@ -9,7 +9,7 @@ This endpoint returns the top *Recommendations* for:
 * one of your [*Interests*](#interests)
 * an ad-hoc [*Query*](#query)
 
-## Recommendations for Interests<a name="interests">&nbsp;</a>
+## Recommendations for Interests<a name="interests"> </a>
 
 
 
@@ -118,7 +118,7 @@ Response:
 
 
 
-## Recommendations for ad-hoc queries<a name="query">&nbsp;</a>
+## Recommendations for ad-hoc queries<a name="query"> </a>
 
 ### Resource URL
 

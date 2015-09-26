@@ -35,7 +35,7 @@ This endpoint returns the top *Recommendations* for:
     <td>query_refinement</td><td>
       A string to be appended to the query defined on the interest to further refine the results.
       Example: On a "Restaurants" base query, you might want to add +"San Francisco" as a refinement.
-      Please see the <a href="http://support.intigi.com/forums/21352731-Interests">query documentation</a> for syntax and operators.
+      Please see the <a href="http://support.contentgems.com/interests/keywords-queries">query documentation</a> for syntax and operators.
       Also make sure to URL encode any special characters. The earlier example would look like this:
       <code>GET https://contentgems.com/api/v1/interests/123/recommendations.json?query_refinement=%2B%22San%20Francisco%22</code>
     </td>
@@ -139,7 +139,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>query</td>
     <td>
       The search query as string. Please see
-      <a href="http://support.intigi.com/forums/21352731-Interests">query documentation</a>
+      <a href="http://support.contentgems.com/interests/keywords-queries">query documentation</a>
       for details.<br/>
       Query string example for the required phrase +"Content Marketing":
       <code>query=%2B%22Content%20Marketing%22</code>.

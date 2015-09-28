@@ -147,12 +147,38 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>Required</td>
   </tr>
   <tr>
+    <td>domain_ids_to_exclude</td>
+    <td>
+      List of domain ids to exclude from results. No URLs from any of the excluded domains will be included in recommendations.<br/>
+      Query string example: <code>domain_ids_to_exclude[]=1&amp;domain_ids_to_exclude[]=2</code>.
+      Note: Please contact us to map domain names (e.g., `contentgems.com`) to their corresponding ids. You can also get a recommendation’s domain_id from a result in the web UI by hovering over the result‘s ‘Block Domain’ link and reading out the `i_source_id` parameter.
+    </td>
+    <td>Optional, default: [] (empty array, no exclusions)</td>
+  </tr>
+  <tr>
+    <td>found_within</td>
+    <td>
+      Results must have been found within the given time period. One of
+      'last_24_hours' or 'last_7_days'.<br/>
+      Query string example: <code>found_within=last_24_hours</code>
+    </td>
+    <td>Optional, default: 'last_24_hours'</td>
+  </tr>
+  <tr>
     <td>max_items</td>
     <td>
       The maximum number of Recommendations to return.<br/>
       Integer between 1 and 50.
     </td>
     <td>Optional, default: 5</td>
+  </tr>
+  <tr>
+    <td>max_word_count</td>
+    <td>
+      Results must have at most this many words.<br/>
+      Integer between 1 and 10,000.
+    </td>
+    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>minimum_score</td>
@@ -164,13 +190,12 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>Optional, default: Nil</td>
   </tr>
   <tr>
-    <td>found_within</td>
+    <td>min_word_count</td>
     <td>
-      Results must have been found within the given time period. One of
-      'last_24_hours' or 'last_7_days'.<br/>
-      Query string example: <code>found_within=last_24_hours</code>
+      Results must have at least this many words.<br/>
+      Integer between 1 and 10,000.
     </td>
-    <td>Optional, default: 'last_24_hours'</td>
+    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>must_have_image</td>
@@ -187,22 +212,6 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       Query string example: <code>must_have_video=true</code>
     </td>
     <td>Optional, default: false</td>
-  </tr>
-  <tr>
-    <td>min_word_count</td>
-    <td>
-      Results must have at least this many words.<br/>
-      Integer between 1 and 10,000.
-    </td>
-    <td>Optional, default: Nil</td>
-  </tr>
-  <tr>
-    <td>max_word_count</td>
-    <td>
-      Results must have at most this many words.<br/>
-      Integer between 1 and 10,000.
-    </td>
-    <td>Optional, default: Nil</td>
   </tr>
   <tr>
     <td>rank_by</td>

@@ -9,11 +9,10 @@ This endpoint returns the top *Recommendations* for:
 * one of your [*Interests*](#interests)
 * an ad-hoc [*Query*](#query)
 
+**NOTE:** Recommendations are referred to as `Results` in the web application.
+
+
 ## Recommendations for Interests<a name="interests"> </a>
-
-
-
-
 
 ### Resource URL
 

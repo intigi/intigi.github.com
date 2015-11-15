@@ -23,6 +23,7 @@ You can confirm that the API is operational by using the [Ping](/api-docs/v1/pin
 ### API Concepts
 
 * [Authentication](/api-docs/v1/authentication.html)
+* [Domain Names](/api-docs/v1/domain-names.html)
 * [Interest Folders and Interests](/api-docs/v1/interest-folders-and-interests.html)
 * [Ping](/api-docs/v1/ping.html)
 * [Recommendations](/api-docs/v1/recommendations.html)

@@ -23,7 +23,7 @@ Please follow this procedure for every *Domain Name* you want to block:
     <th>Name</th><th>Description</th><th>Optional, required, defaults</th>
   </tr>
   <tr>
-    <td>domain_name</td><td>The name of the domain. This parameter is case insensitive.</td><td>Required</td>
+    <td>domain_name</td><td>The name of the domain. The primary domain <code>contentgems.com</code> is considered different from the subdomain <code>www.contentgems.com</code>. This parameter is case insensitive.</td><td>Required</td>
   </tr>
 </table>
 
@@ -39,7 +39,10 @@ The response is a Domain JSON object with the following attributes:
     <td>domain_name</td><td>The name of the domain after it has been normalized by ContentGems.</td>
   </tr>
   <tr>
-    <td>domain_id</td><td>The id of the domain if it exists. Otherwise `null`.</td>
+    <td>domain_id</td><td>The id of the domain if it exists. Otherwise <code>null</code>.</td>
+  </tr>
+  <tr>
+    <td>error</td><td>An error message if there is a problem handling the request.</td>
   </tr>
 </table>
 
@@ -54,6 +57,6 @@ Response:
 {% highlight javascript %}
 {
   "domain_name": "contentgems.com",
-  "domain_id": 539
+  "domain_id": 962209
 }
 {% endhighlight %}

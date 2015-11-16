@@ -152,7 +152,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       Query string example: <code>domain_ids_to_exclude[]=1&amp;domain_ids_to_exclude[]=2</code>.
       Note: Please contact us to map domain names (e.g., `contentgems.com`) to their corresponding ids. You can also get a recommendation’s domain_id from a result in the web UI by hovering over the result‘s ‘Block Domain’ link and reading out the `i_source_id` parameter.<br/>
       You can retrieve a *Domain Name's* `domain_id` using the
-      [Domain Names API endpoint](/api-docs/v1/domain-names.html).
+      [Domains API endpoint](/api-docs/v1/domains.html).
     </td>
     <td>Optional, default: [] (empty array, no exclusions)</td>
   </tr>

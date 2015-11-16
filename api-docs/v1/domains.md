@@ -2,13 +2,13 @@
 layout: default
 ---
 
-# Domain Names
+# Domains
 
-This endpoint allows you to retrieve the ContentGems `domain_id` for a given *Domain Name*. This is used for blocking *Recommendations* from certain *Domain Names*.
+This endpoint allows you to retrieve the ContentGems `domain_id` for a given *Domain*. This is used for blocking *Recommendations* from certain *Domains*.
 
-Please follow this procedure for every *Domain Name* you want to block:
+Please follow this procedure for every *Domain* you want to block:
 
-* Retrieve the `domain_id` for the *Domain Name* using this API endpoint.
+* Retrieve the `domain_id` for the *Domain* using this API endpoint.
 * Add the `domain_id` to a list of `domain_ids` you want to block on your end.
 * Add the `domain_ids_to_exclude` request parameter to your *Recommendations* API requests. Use the list of `domain_ids` as value.
 

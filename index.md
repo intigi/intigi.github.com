@@ -6,7 +6,7 @@ layout: default
 
 Follow these steps to get started with the ContentGems API:
 
-1. [Sign up](https://contentgems.com) for an ContentGems account.
+1. [Sign up](https://contentgems.com) for a ContentGems account.
 2. Contact us to enable [API access](mailto:support@contentgems.com).
 3. Set up your *Interests* and *Sources* in the ContentGems web app.
 4. Use the ContentGems API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.

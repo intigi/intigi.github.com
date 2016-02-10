@@ -9,7 +9,7 @@ This endpoint returns the top *Recommendations* for:
 * one of your [*Interests*](#interests)
 * an ad-hoc [*Query*](#query)
 
-**NOTE:** Recommendations are referred to as `Results` in the web application.
+**NOTE:** Recommendations are referred to as `Recommendations` in the web application.
 
 
 ## Recommendations for Interests<a name="interests"> </a>
@@ -32,7 +32,7 @@ This endpoint returns the top *Recommendations* for:
   </tr>
   <tr>
     <td>query_refinement</td><td>
-      A string to be appended to the query defined on the interest to further refine the results.
+      A string to be appended to the query defined on the interest to further refine the recommendations.
       Example: On a "Restaurants" base query, you might want to add +"San Francisco" as a refinement.
       Please see the <a href="http://support.contentgems.com/interests/keywords-queries">query documentation</a> for syntax and operators.
       Also make sure to URL encode any special characters. The earlier example would look like this:
@@ -148,18 +148,36 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>domain_ids_to_exclude</td>
     <td>
-      List of domain ids to exclude from results. No URLs from any of the excluded domains will be included in recommendations.<br/>
+      List of domain ids to exclude from recommendations. No URLs from any of the excluded domains will be included in recommendations.<br/>
       Query string example: <code>domain_ids_to_exclude[]=1&amp;domain_ids_to_exclude[]=2</code>.
-      Note: Please contact us to map domain names (e.g., `contentgems.com`) to their corresponding ids. You can also get a recommendation’s domain_id from a result in the web UI by hovering over the result‘s ‘Block Domain’ link and reading out the `i_source_id` parameter.<br/>
-      You can retrieve a *Domain Name's* `domain_id` using the
-      [Domains API endpoint](/api-docs/v1/domains.html).
+      You can retrieve a <em>Domain Name's</em> <code>domain_id</code> using the
+      <a href="/api-docs/v1/domains.html">Domains API endpoint</a>.
+      Note: You can also get a recommendation’s domain_id from a result in the web UI by hovering over the result‘s ‘Block Domain’ link and reading out the `i_source_id` parameter.<br/>
     </td>
     <td>Optional, default: [] (empty array, no exclusions)</td>
   </tr>
   <tr>
+    <td>feed_bundle_ids_to_exclude</td>
+    <td>
+      List of Feed bundle ids to exclude from recommendations. No URLs from any of the excluded feed bundles will be included in recommendations.<br/>
+      Query string example: <code>feed_bundle_ids_to_exclude[]=1&amp;feed_bundle_ids_to_exclude[]=2</code>.
+      You can retrieve a <em>Feed Bundle's</em> <code>id</code> from the web UI: Go to "Manage Sources" / "Manage Bundles". Hover over the "Edit" link for the bundle you want and read out the number after the <code>/i_feed_bundles/</code> segment in the URL.
+    </td>
+    <td>Optional, default: [] (empty array, no exclusions)</td>
+  </tr>
+  <tr>
+    <td>feed_bundle_ids_to_use</td>
+    <td>
+      List of Feed bundle ids to limit recommendations to. Only URLs from the used feed bundles will be included in recommendations.<br/>
+      Query string example: <code>feed_bundle_ids_to_use[]=1&amp;feed_bundle_ids_to_use[]=2</code>.
+      You can retrieve a <em>Feed Bundle's</em> <code>id</code> from the web UI: Go to "Manage Sources" / "Manage Bundles". Hover over the "Edit" link for the bundle you want and read out the number after the <code>/i_feed_bundles/</code> segment in the URL.
+    </td>
+    <td>Optional, default: [] (empty array, no limitations)</td>
+  </tr>
+  <tr>
     <td>found_within</td>
     <td>
-      Results must have been found within the given time period. One of
+      Recommendations must have been found within the given time period. One of
       'last_24_hours' or 'last_7_days'.<br/>
       Query string example: <code>found_within=last_24_hours</code>
     </td>
@@ -176,7 +194,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>max_word_count</td>
     <td>
-      Results must have at most this many words.<br/>
+      Recommendations must have at most this many words.<br/>
       Integer between 1 and 10,000.
     </td>
     <td>Optional, default: Nil</td>
@@ -184,7 +202,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>minimum_score</td>
     <td>
-      Results must have a score higher than this. Scores are
+      Recommendations must have a score higher than this. Scores are
       computed by the indexed search engine and typically range from 0.01 to 15.<br/>
       Query string example: <code>minimum_score=0.5</code>
     </td>
@@ -193,7 +211,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>min_word_count</td>
     <td>
-      Results must have at least this many words.<br/>
+      Recommendations must have at least this many words.<br/>
       Integer between 1 and 10,000.
     </td>
     <td>Optional, default: Nil</td>
@@ -201,7 +219,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>must_have_image</td>
     <td>
-      Results must have images. Boolean true or false.<br/>
+      Recommendations must have images. Boolean true or false.<br/>
       Query string example: <code>must_have_image=true</code>
     </td>
     <td>Optional, default: false</td>
@@ -209,7 +227,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>must_have_video</td>
     <td>
-      Results must have videos. Boolean true or false.<br/>
+      Recommendations must have videos. Boolean true or false.<br/>
       Query string example: <code>must_have_video=true</code>
     </td>
     <td>Optional, default: false</td>
@@ -217,7 +235,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>rank_by</td>
     <td>
-      Results will be ranked by this attribute before the top items are selected. One of
+      Recommendations will be ranked by this attribute before the top items are selected. One of
       'relevancy' or 'popularity'.<br/>
       Query string example: <code>rank_by=popularity</code>
     </td>
@@ -247,7 +265,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>sort_by</td>
     <td>
-      Results will be sorted by this attribute after the top items are selected. One of
+      Recommendations will be sorted by this attribute after the top items are selected. One of
       'date', 'relevancy' or 'popularity'.<br/>
       Query string example: <code>sort_by=date</code>
     </td>

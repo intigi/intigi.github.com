@@ -211,7 +211,15 @@ the params in the request body to avoid length restrictions on URLs for GET requ
   <tr>
     <td>min_word_count</td>
     <td>
-      Recommendations must have at least this many words.<br/>
+      Recommendations’ body text must have at least this many words.<br/>
+      Integer between 1 and 10,000.
+    </td>
+    <td>Optional, default: Nil</td>
+  </tr>
+  <tr>
+    <td>min_word_count_title</td>
+    <td>
+      Results’ title must have at least this many words.<br/>
       Integer between 1 and 10,000.
     </td>
     <td>Optional, default: Nil</td>

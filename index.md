@@ -6,7 +6,7 @@ layout: default
 
 Follow these steps to get started with the ContentGems API:
 
-1. [Sign up](https://contentgems.com) for an ContentGems account.
+1. [Sign up](https://contentgems.com) for a ContentGems account.
 2. Contact us to enable [API access](mailto:support@contentgems.com).
 3. Set up your *Interests* and *Sources* in the ContentGems web app.
 4. Use the ContentGems API to get [Recommendations](/api-docs/v1/recommendations.html) in JSON format.
@@ -27,3 +27,7 @@ You can confirm that the API is operational by using the [Ping](/api-docs/v1/pin
 * [Interest Folders and Interests](/api-docs/v1/interest-folders-and-interests.html)
 * [Ping](/api-docs/v1/ping.html)
 * [Recommendations](/api-docs/v1/recommendations.html)
+
+### API Status
+
+<img src="https://share.pingdom.com/banners/55e2053e" alt="Uptime Report for ContentGems: Last 30 days" title="Uptime Report for ContentGems: Last 30 days" width="300" height="165" />

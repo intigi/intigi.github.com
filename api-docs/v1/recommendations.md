@@ -146,6 +146,13 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>Required</td>
   </tr>
   <tr>
+    <td>dedup_similarity_threshold</td>
+    <td>
+      ContentGems removes duplicate articles from the recommendations. It computes the <a href="https://en.wikipedia.org/wiki/Jaccard_index">Jaccard index</a> for each article pair in the result set and groups together any articles with very high Jaccard similarity indexes, only showing the most popular one. The `dedup_similarity_threshold` determines at what Jaccard index two articles are considered duplicates. Practical values are between 0.5 (vaguely similar article body text) and 1.0 (identical article body text).
+    </td>
+    <td>Optional, default: 0.85</td>
+  </tr>
+  <tr>
     <td>domain_ids_to_exclude</td>
     <td>
       List of domain ids to exclude from results. No URLs from any of the excluded domains will be included in recommendations.<br/>

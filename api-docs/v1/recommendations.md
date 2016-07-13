@@ -142,6 +142,8 @@ the params in the request body to avoid length restrictions on URLs for GET requ
       for details.<br/>
       Query string example for the required phrase +"Content Marketing":
       <code>query=%2B%22Content%20Marketing%22</code>.
+      Query string example for the two required fuzzy terms "+solar~0.3 +panels~0.3":
+      <code>query=%2Bsolar~0.3%20%2Bpanels~0.3</code>
     </td>
     <td>Required</td>
   </tr>

@@ -151,41 +151,6 @@ window.ContentGemsWidgetOptions = {
       <td>classes</td>
       <td>object</td>
       <td>
-<pre>&lt;div class="cgw-container"&gt;
-  &lt;div class="cgw-list"&gt;
-
-    &lt;div class="cgw-item cgw-col-3"&gt;
-      &lt;a&gt;
-        &lt;div class="cgw-item--image"&gt;
-          &lt;img class="cgw-loaded"&gt;&lt;/div&gt;
-        &lt;div class="cgw-item--title"&gt;&lt;/div&gt;
-        &lt;div class="cgw-item--source"&gt;
-          &lt;img/&gt;
-          &lt;span&gt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="cgw-item--excerpt"&gt;&lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-
-    ...
-
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-      </td>
-      <td>
-        <p>Classes used by the widget, you can override them here.</p>
-        <p>
-          <code>cgw-container</code> will have the classes
-          <code>cgw-done</code> when load is done, <code>cgw-loading</code> and when the widget is loading.
-        </p>
-        <p>
-          <code>cgw-view-grid</code>,
-          <code>cgw-view-list</code>,
-          <code>cgw-view-compact</code> will be toggle on <code>cgw-container</code> for the different view modes
-        </p>
-        <p><code>cgw-item--image</code> the <code>img</code> will be loaded in, and have the class <code>cgw-loading</code>
-        once the image has been loaded it will have the class <code>cgw-loaded</code>. You can see this below.
-        </p>
         <table class="table table-bordered table-striped table-condensed">
           <thead>
             <tr>
@@ -268,6 +233,41 @@ window.ContentGemsWidgetOptions = {
             </tr>
           </tbody>
         </table>
+      </td>
+      <td>
+        <p>Classes used by the widget, you can override them here.</p>
+        <p>
+          <code>cgw-container</code> will have the classes
+          <code>cgw-done</code> when load is done, <code>cgw-loading</code> and when the widget is loading.
+        </p>
+        <p>
+          <code>cgw-view-grid</code>,
+          <code>cgw-view-list</code>,
+          <code>cgw-view-compact</code> will be toggle on <code>cgw-container</code> for the different view modes
+        </p>
+        <p><code>cgw-item--image</code> the <code>img</code> will be loaded in, and have the class <code>cgw-loading</code>
+        once the image has been loaded it will have the class <code>cgw-loaded</code>. You can see this below.
+        </p>
+<pre>&lt;div class="cgw-container"&gt;
+  &lt;div class="cgw-list"&gt;
+
+    &lt;div class="cgw-item cgw-col-3"&gt;
+      &lt;a&gt;
+        &lt;div class="cgw-item--image"&gt;
+          &lt;img class="cgw-loaded"&gt;&lt;/div&gt;
+        &lt;div class="cgw-item--title"&gt;&lt;/div&gt;
+        &lt;div class="cgw-item--source"&gt;
+          &lt;img/&gt;
+          &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="cgw-item--excerpt"&gt;&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    ...
+
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
       </td>
     </tr>
   </tbody>

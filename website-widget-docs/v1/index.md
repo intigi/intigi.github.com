@@ -151,26 +151,26 @@ window.ContentGemsWidgetOptions = {
       <td>classes</td>
       <td>object</td>
       <td>
-<pre><div class="cgw-container">
-  <div class="cgw-list">
+<pre>&lt;div class="cgw-container"&gt;
+  &lt;div class="cgw-list"&gt;
 
-    <div class="cgw-item cgw-col-3">
-      <a>
-        <div class="cgw-item--image">
-          <img class="cgw-loaded"></div>
-        <div class="cgw-item--title"></div>
-        <div class="cgw-item--source">
-          <img/>
-          <span></span>
-        </div>
-        <div class="cgw-item--excerpt"></div>
-      </a>
-    </div>
+    &lt;div class="cgw-item cgw-col-3"&gt;
+      &lt;a&gt;
+        &lt;div class="cgw-item--image"&gt;
+          &lt;img class="cgw-loaded"&gt;&lt;/div&gt;
+        &lt;div class="cgw-item--title"&gt;&lt;/div&gt;
+        &lt;div class="cgw-item--source"&gt;
+          &lt;img/&gt;
+          &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="cgw-item--excerpt"&gt;&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
 
     ...
 
-  </div>
-</div></pre>
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
       </td>
       <td>
         <p>Classes used by the widget, you can override them here.</p>

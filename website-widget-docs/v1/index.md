@@ -151,88 +151,22 @@ window.ContentGemsWidgetOptions = {
       <td>classes</td>
       <td>object</td>
       <td>
-        <table class="table table-bordered table-striped table-condensed">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>type</th>
-              <th>default</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>loading</td>
-              <td>string</td>
-              <td>cgw-loading</td>
-            </tr>
-
-            <tr>
-              <td>loaded</td>
-              <td>string</td>
-              <td>cgw-loading</td>
-            </tr>
-            <tr>
-              <td>done</td>
-              <td>string</td>
-              <td>cgw-done</td>
-            </tr>
-            <tr>
-              <td>columnPrefix</td>
-              <td>string</td>
-              <td>cgw-col</td>
-            </tr>
-            <tr>
-              <td>container</td>
-              <td>string</td>
-              <td>cgw-container</td>
-            </tr>
-            <tr>
-              <td>viewToggle</td>
-              <td>string</td>
-              <td>cgw-view-toggle</td>
-            </tr>
-            <tr>
-              <td>viewPrefix</td>
-              <td>string</td>
-              <td>cgw-view</td>
-            </tr>
-            <tr>
-              <td>list</td>
-              <td>string</td>
-              <td>cgw-list</td>
-            </tr>
-            <tr>
-              <td>item</td>
-              <td>string</td>
-              <td>cgw-item</td>
-            </tr>
-            <tr>
-              <td>itemContent</td>
-              <td>string</td>
-              <td>cgw-item--content</td>
-            </tr>
-            <tr>
-              <td>itemTitle</td>
-              <td>string</td>
-              <td>cgw-item--title</td>
-            </tr>
-            <tr>
-              <td>itemSource</td>
-              <td>string</td>
-              <td>cgw-item--source</td>
-            </tr>
-            <tr>
-              <td>itemImage</td>
-              <td>string</td>
-              <td>cgw-item--image</td>
-            </tr>
-            <tr>
-              <td>itemExcerpt</td>
-              <td>string</td>
-              <td>cgw-item--excerpt</td>
-            </tr>
-          </tbody>
-        </table>
+<pre>{
+  loading: "cgw-loading",
+  loaded: "cgw-loading",
+  done: "cgw-done",
+  columnPrefix: "cgw-col",
+  container: "cgw-container",
+  viewToggle: "cgw-view-toggle",
+  viewPrefix: "cgw-view",
+  list: "cgw-list",
+  item: "cgw-item",
+  itemContent: "cgw-item--content",
+  itemTitle: "cgw-item--title",
+  itemSource: "cgw-item--source",
+  itemImage: "cgw-item--image",
+  itemExcerpt: "cgw-item--excerpt"
+}</pre>
       </td>
       <td>
         <p>Classes used by the widget, you can override them here.</p>

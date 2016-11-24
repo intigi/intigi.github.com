@@ -136,7 +136,7 @@ window.ContentGemsWidgetOptions = {
       <td>"ContentGemsWidget"</td>
       <td>
         <p>ID selector for the widget, where to place the widget</p>
-        <pre><div id="ContentGemsWidget"></div></pre>
+        <pre>&lt;div id="ContentGemsWidget"&gt;&lt;/div&gt;</pre>
       </td>
     </tr>
     <tr>
@@ -150,7 +150,7 @@ window.ContentGemsWidgetOptions = {
     <tr>
       <td>classes</td>
       <td>object</td>
-      <td>
+      <td colspan="2">
 <pre>{
   loading: "cgw-loading",
   loaded: "cgw-loading",
@@ -167,8 +167,6 @@ window.ContentGemsWidgetOptions = {
   itemImage: "cgw-item--image",
   itemExcerpt: "cgw-item--excerpt"
 }</pre>
-      </td>
-      <td>
         <p>Classes used by the widget, you can override them here.</p>
         <p>
           <code>cgw-container</code> will have the classes

@@ -7,6 +7,7 @@ layout: default
 This site contains developer information related to:
 
 * [ContentGems API V1](api-docs/v1/index.html)
+* [ContentGems website widget](website-widget-docs/v1/index.html)
 
 ### API Status
 

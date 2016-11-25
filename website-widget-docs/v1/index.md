@@ -9,10 +9,10 @@ ContentGems into your website.
 
 ### Getting started
 
-Copy and paste the code below, on you website right before the head tag.
+Copy and paste the code below into your web page where you want the curated news to appear:
 
 
-{% highlight javascript %}
+{% highlight html %}
 <div id="ContentGemsWidget"></div>
 
 <script>
@@ -25,9 +25,9 @@ window.ContentGemsWidgetOptions = {
 {% endhighlight %}
 
 
-### Configuration options
+### Configuration parameters
 
-Below is an example of how you would configure the options available for the website widget:
+Below is an example of the website widget's optional configuration parameters. Please note that the `feed_id` parameter is always required.
 
 {% highlight javascript %}
 window.ContentGemsWidgetOptions = {
@@ -80,6 +80,8 @@ window.ContentGemsWidgetOptions = {
   }
 };
 {% endhighlight %}
+
+### Configuration details
 
 <div class="table-responsive">
 <table class="table table-bordered table-striped">

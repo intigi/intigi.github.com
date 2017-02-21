@@ -209,6 +209,15 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>Optional, default: Nil</td>
   </tr>
   <tr>
+    <td>minimum_popularity</td>
+    <td>
+      Recommendations must have a popularity equal to or higher than this.<br/>
+      One of:<br/>
+      <code>"none"</code>, <code>"very_low"</code>, <code>"low"</code>, <code>"medium"</code>, <code>"high"</code>, or <code>"very_high"</code>.
+    </td>
+    <td>Optional, default: "none"</td>
+  </tr>
+  <tr>
     <td>minimum_score</td>
     <td>
       Recommendations must have a score higher than this. Scores are

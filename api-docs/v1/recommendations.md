@@ -405,14 +405,14 @@ Below is a list of ContentGems Recommendation API query examples. You need to UR
 
 ### URL encoding
 
-All your API queries must be URL encoded before you submit them to ContentGems. You can use an [online URL encoder](https://www.urlencoder.org/) or do it manually.
+All your API queries must be URL encoded before you submit them to ContentGems. You can use an [online URL encoder](https://www.urlencoder.org/) or use the table below for common characters:
 
-Some common encoded characters:
-
-* `+` (plus sign) => `%2B`
 * (space) => `%20`
 * `"` (double quote) => `%22`
+* `:` (colon) => `%3A`
+* `+` (plus sign) => `%2B`
 * `^` (boost operator) => `%5E`
+* `*` (wildcard operator) => `%2A`
 
 ### Further information
 

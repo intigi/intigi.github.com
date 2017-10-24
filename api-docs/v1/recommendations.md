@@ -409,10 +409,10 @@ All your API queries must be URL encoded before you submit them to ContentGems. 
 
 Some common encoded characters:
 
-* `+` => `%2B`
-* ` ` => `%20`
-* `"` => `%22`
-* `^` => `%5E`
+* `+` (plus sign) => `%2B`
+* (space) => `%20`
+* `"` (double quote) => `%22`
+* `^` (boost operator) => `%5E`
 
 ### Further information
 

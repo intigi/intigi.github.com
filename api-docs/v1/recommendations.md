@@ -344,18 +344,58 @@ Same as response data for [*Interests*](#interests). Please see above for detail
 
 Below is a list of ContentGems Recommendation API query examples. You need to URL encode each plain text query before submitting it to the ContentGems API.
 
-Description | Plain text query | URL encoded query
-------------|------------------|-------------------------
-**Basic query:** Article must contain "banana" anywhere | `+banana` | `%2Bbanana`
-**Phrases:** Article must contain "banana boat" | `+"banana boat"` | `%2B%22banana%20boat%22`
-**Multiple terms:** Article must contain "apple" and "banana" | `+banana +apple` | `%2Bbanana%20%2Bapple`
-**Should, must, must-not terms:** Article should contain "apple" and/or "banana", must contain "lemon", and must not contain "pear" | `apple banana +lemon -pear` | `apple%20banana%20%2Blemon%20-pear`
-**Field specifiers:** Article must contain "apple" in the title and "banana" in the excerpt | `title:+apple excerpt:+banana` | `title%3A%2Bapple%20excerpt%3A%2Bbanana`
-**Boolean OR:** Article must contain "apple" or "banana" in the title | `title:+(apple banana)` | `title%3A%2B%28apple%20banana%29`
-**Wildcards:** Article must contain words that start with "banana", e.g., "banana" and "bananas" | `+banana*` | `%2Bbanana%2A`
-**Boosting:** Prefer articles that contain "apple" over those that contain "banana" or "pear" | `apple^2 banana pear` | `apple%5E2%20banana%20pear`
-Fields
-**Fuzzy matches:** Match both "color" as well as "colour" | `~color0.3` | `~color0.3`
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Plain text query</th>
+    <th>URL encoded query</th>
+  </tr>
+  <tr>
+    <td>Basic query: Article must contain "banana".</td>
+    <td><code>+banana</code></td>
+    <td><code>%2Bbanana</code></td>
+  <tr>
+  <tr>
+    <td>Phrases: Article must contain "banana boat".</td>
+    <td><code>+"banana boat"</code></td>
+    <td><code>%2B%22banana%20boat%22</code></td>
+  <tr>
+  <tr>
+    <td>Multiple terms: Article must contain "apple" and "banana".</td>
+    <td><code>+banana +apple</code></td>
+    <td><code>%2Bbanana%20%2Bapple</code></td>
+  <tr>
+  <tr>
+    <td>Should, must, must-not terms: Article should contain "apple" and/or "banana", must contain "lemon", and must not contain "pear".</td>
+    <td><code>apple banana +lemon -pear</code></td>
+    <td><code>apple%20banana%20%2Blemon%20-pear</code></td>
+  <tr>
+  <tr>
+    <td>Field specifiers: Article must contain "apple" in the title and "banana" in the excerpt.</td>
+    <td><code>title:+apple excerpt:+banana</code></td>
+    <td><code>title%3A%2Bapple%20excerpt%3A%2Bbanana</code></td>
+  <tr>
+  <tr>
+    <td>Boolean OR: Article must contain "apple" or "banana" in the title.</td>
+    <td><code>title:+(apple banana)</code></td>
+    <td><code>title%3A%2B%28apple%20banana%29</code></td>
+  <tr>
+  <tr>
+    <td>Wildcards: Article must contain words that start with "banana", e.g., "banana" and "bananas".</td>
+    <td><code>+banana*</code></td>
+    <td><code>%2Bbanana%2A</code></td>
+  <tr>
+  <tr>
+    <td>Boosting: Prefer articles that contain "apple" over those that contain "banana" or "pear".</td>
+    <td><code>apple^2 banana pear</code></td>
+    <td><code>apple%5E2%20banana%20pear</code></td>
+  <tr>
+  <tr>
+    <td>Fuzzy matches: Match both "color" as well as "colour".</td>
+    <td><code>~color0.3</code></td>
+    <td><code>~color0.3</code></td>
+  <tr>
+</table>
 
 ### Available fields
 

@@ -9,8 +9,7 @@ This endpoint returns the top *Recommendations* for:
 * one of your [*Interests*](#interests)
 * an ad-hoc [*Query*](#query)
 
-**NOTE:** Recommendations are referred to as `Recommendations` in the web application.
-
+Make sure to review the [*API query documentation*](#api_queries).
 
 ## Recommendations for Interests<a name="interests"> </a>
 
@@ -34,7 +33,7 @@ This endpoint returns the top *Recommendations* for:
     <td>query_refinement</td><td>
       A string to be appended to the query defined on the interest to further refine the recommendations.
       Example: On a "Restaurants" base query, you might want to add +"San Francisco" as a refinement.
-      Please see the <a href="http://support.contentgems.com/interests/keywords-queries">query documentation</a> for syntax and operators.
+      Please see the <a href="#api_queries">query documentation</a> for syntax and operators.
       Also make sure to URL encode any special characters. The earlier example would look like this:
       <code>GET https://contentgems.com/api/v1/interests/123/recommendations.json?query_refinement=%2B%22San%20Francisco%22</code>
     </td>
@@ -138,7 +137,7 @@ the params in the request body to avoid length restrictions on URLs for GET requ
     <td>query</td>
     <td>
       The search query as string. Please see
-      <a href="http://support.contentgems.com/interests/keywords-queries">query documentation</a>
+      <a href="#api_queries">query documentation</a>
       for details.<br/>
       Query string example for the required phrase +"Content Marketing":
       <code>query=%2B%22Content%20Marketing%22</code>.
@@ -340,3 +339,41 @@ Request:
 Response:
 
 Same as response data for [*Interests*](#interests). Please see above for details.
+
+## API queries<a name="api_queries"> </a>
+
+Below is a list of ContentGems Recommendation API query examples. You need to URL encode each plain text query before submitting it to the ContentGems API.
+
+Description | Plain text query | URL encoded query
+------------|------------------|-------------------------
+**Basic query:** Article must contain "banana" anywhere | `+banana` | `%2Bbanana`
+**Phrases:** Article must contain "banana boat" | `+"banana boat"` | `%2B%22banana%20boat%22`
+**Multiple terms:** Article must contain "apple" and "banana" | `+banana +apple` | `%2Bbanana%20%2Bapple`
+**Should, must, must-not terms:** Article should contain "apple" and/or "banana", must contain "lemon", and must not contain "pear" | `apple banana +lemon -pear` | `apple%20banana%20%2Blemon%20-pear`
+**Field specifiers:** Article must contain "apple" in the title and "banana" in the excerpt | `title:+apple excerpt:+banana` | `title%3A%2Bapple%20excerpt%3A%2Bbanana`
+**Boolean OR:** Article must contain "apple" or "banana" in the title | `title:+(apple banana)` | `title%3A%2B%28apple%20banana%29`
+**Wildcards:** Article must contain words that start with "banana", e.g., "banana" and "bananas" | `+banana*` | `%2Bbanana%2A`
+**Boosting:** Prefer articles that contain "apple" over those that contain "banana" or "pear" | `apple^2 banana pear` | `apple%5E2%20banana%20pear`
+Fields
+**Fuzzy matches:** Match both "color" as well as "colour" | `~color0.3` | `~color0.3`
+
+### Available fields
+
+* `title` - this matches the title only
+* `body` - this matches the entire result body text
+* `excerpt` - this matches the text body's first 300 characters
+
+### URL encoding
+
+All your API queries must be URL encoded before you submit them to ContentGems. You can use an [online URL encoder](https://www.urlencoder.org/) or do it manually.
+
+Some common encoded characters:
+
+* `+` => `%2B`
+* ` ` => `%20`
+* `"` => `%22`
+* `^` => `%5E`
+
+### Further information
+
+Please see the [ContentGems help documentation](http://support.contentgems.com/interests/keywords-queries) for more information on queries.

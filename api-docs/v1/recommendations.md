@@ -354,47 +354,47 @@ Below is a list of ContentGems Recommendation API query examples. You need to UR
     <td>Basic query: Article must contain "banana".</td>
     <td><code>+banana</code></td>
     <td><code>%2Bbanana</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Phrases: Article must contain "banana boat".</td>
     <td><code>+"banana boat"</code></td>
     <td><code>%2B%22banana%20boat%22</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Multiple terms: Article must contain "apple" and "banana".</td>
     <td><code>+banana +apple</code></td>
     <td><code>%2Bbanana%20%2Bapple</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Should, must, must-not terms: Article should contain "apple" and/or "banana", must contain "lemon", and must not contain "pear".</td>
     <td><code>apple banana +lemon -pear</code></td>
     <td><code>apple%20banana%20%2Blemon%20-pear</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Field specifiers: Article must contain "apple" in the title and "banana" in the excerpt.</td>
     <td><code>title:+apple excerpt:+banana</code></td>
     <td><code>title%3A%2Bapple%20excerpt%3A%2Bbanana</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Boolean OR: Article must contain "apple" or "banana" in the title.</td>
     <td><code>title:+(apple banana)</code></td>
     <td><code>title%3A%2B%28apple%20banana%29</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Wildcards: Article must contain words that start with "banana", e.g., "banana" and "bananas".</td>
     <td><code>+banana*</code></td>
     <td><code>%2Bbanana%2A</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Boosting: Prefer articles that contain "apple" over those that contain "banana" or "pear".</td>
     <td><code>apple^2 banana pear</code></td>
     <td><code>apple%5E2%20banana%20pear</code></td>
-  <tr>
+  </tr>
   <tr>
     <td>Fuzzy matches: Match both "color" as well as "colour".</td>
     <td><code>~color0.3</code></td>
     <td><code>~color0.3</code></td>
-  <tr>
+  </tr>
 </table>
 
 ### Available fields

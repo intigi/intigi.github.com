@@ -372,13 +372,13 @@ Below is a list of ContentGems Recommendation API query examples. You need to UR
   </tr>
   <tr>
     <td>Field specifiers: Article must contain "apple" in the title and "banana" in the excerpt.</td>
-    <td><code>title:+apple excerpt:+banana</code></td>
-    <td><code>title%3A%2Bapple%20excerpt%3A%2Bbanana</code></td>
+    <td><code>+title:apple +excerpt:banana</code></td>
+    <td><code>%2Btitle%3Aapple%20%2Bexcerpt%3Abanana</code></td>
   </tr>
   <tr>
     <td>Boolean OR: Article must contain "apple" or "banana" in the title.</td>
-    <td><code>title:+(apple banana)</code></td>
-    <td><code>title%3A%2B%28apple%20banana%29</code></td>
+    <td><code>+title:(apple banana)</code></td>
+    <td><code>%2Btitle%3A%28apple%20banana%29</code></td>
   </tr>
   <tr>
     <td>Wildcards: Article must contain words that start with "banana", e.g., "banana" and "bananas".</td>
